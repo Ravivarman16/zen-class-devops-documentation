@@ -11,7 +11,6 @@
 ## **Example:**
 
 
-
 ![example](https://github.com/Ravivarman16/images/blob/main/ALTER-EXAMPLE-ALB-EC2.png)
 
 
