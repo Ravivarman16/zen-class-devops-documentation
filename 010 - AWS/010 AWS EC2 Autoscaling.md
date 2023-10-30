@@ -1,13 +1,12 @@
 ---
-## AWS EC2 Autoscaling:
 
-![AWS-EC2-AUTOSCALING](https://github.com/Ravivarman16/images/blob/main/ALTER-ALB-MAIN.png)
+## **AWS EC2 AUTOSCALING**
 
+![INTRO](https://github.com/Ravivarman16/images/blob/main/ALTER-ALB-MAIN.png)
 
-**AWS EC2 Autoscaling** helps you maintain application availability according to the demand by automatically adding or removing Amazon Elastic Compute Cloud (Amazon EC2) instances according to conditions that you define.
+__AWS EC2 Autoscaling__ helps you maintain application availability according to the demand by automatically adding or removing Amazon Elastic Compute Cloud (Amazon EC2) instances according to conditions that you define.
 
-
-## **Example:**
+### **Example:**
 
 
 ![example](https://github.com/Ravivarman16/images/blob/main/ALTER-EXAMPLE-ALB-EC2.png)
