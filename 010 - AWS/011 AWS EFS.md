@@ -157,15 +157,30 @@ ___
 
 ## **Steps To Create Amazon EFS:**
 
-**1. Login into** [AWS Management Console:](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26nc2%3Dh_ct%26src%3Dheader-signin%26state%3DhashArgsFromTB_eu-north-1_67569bb514fd7334&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=O-19Kk8URbYdcSReZJtf-59QKpGm4u3dALUVrpv1Fj4&code_challenge_method=SHA-256)
+
+### **1. Login into** [AWS Management Console:](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26nc2%3Dh_ct%26src%3Dheader-signin%26state%3DhashArgsFromTB_eu-north-1_67569bb514fd7334&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=O-19Kk8URbYdcSReZJtf-59QKpGm4u3dALUVrpv1Fj4&code_challenge_method=SHA-256)
+
+
 
 ![Login](https://github.com/Ravivarman16/images/blob/main/Login%20into%20console.png)
 
-**2. Launch minimum 2 AWS EC2 instances with different availability zones:**
+
+
+---
+
+
+### **2. Launch minimum 2 AWS EC2 instances with different availability zones:**
+
+
 
 ![INSTANCES_EFS](https://github.com/Ravivarman16/images/blob/main/EFS/INSTANCE_EFS.png)
 
-**3. Install NFS Agent on these instances:**
+
+---
+
+
+### **3. Install NFS Agent on these instances:**
+
 
 + **For Ubuntu based instances:**
 
@@ -173,33 +188,70 @@ ___
       apt-get upgrade -y
       apt-get install -y nfs-common
 
+
 + **For RedHat & CentOS based instances:**
 
       yum update
       yum upgrade -y
       yum install -y nfs-utils
 
+
+---
+
+
 **4. Then search EFS on service panel:**
+
+
 
 ![EFS](https://github.com/Ravivarman16/images/blob/main/EFS/EFS.png)
 
+
+---
+
+
 **5. Then click Create file system:**
+
+
 
 ![CREATE_EFS](https://github.com/Ravivarman16/images/blob/main/EFS/CREATE_EFS.png)
 
+
+---
+
+
 **6. Then name the EFS file system, select the VPC and Then select Customize option:**
+
+
     
 ![CREATION](https://github.com/Ravivarman16/images/blob/main/EFS/CUSTOMIZE.png)
 
+
+---
+
+
 **7. Selecting the Storage class according to your preferences:**
+
+
 
 ![storage_class](https://github.com/Ravivarman16/images/blob/main/EFS/STORAGE_CLASS_SELECTING.png)
 
+
+---
+
+
 **8. Then under lifecycle management select according to your preferences:**
+
+
 ![management](https://github.com/Ravivarman16/images/blob/main/EFS/LIFECYCLE_MANAGEMENT.png)
 
+
+---
+
+
 **9. Then under performance settings:** 
+
 Throughput mode, there will be two options
+
 + Enhanced: (**it will automatically scaled based on traffic**)
   
   - Elastic 
@@ -209,71 +261,144 @@ Throughput mode, there will be two options
 
 Select according to your preferences: click next
 
+
+
 ![performance](https://github.com/Ravivarman16/images/blob/main/EFS/performance_enhanced.png)
+
+
+---
+
 
 **10. Then select the VPC where your instance is running, mount the targets according to the instance availability zones, click next**
 
+
+
 ![mount](https://github.com/Ravivarman16/images/blob/main/EFS/mount_targets.png)
+
+
+---
+
 
 **11. Under File policies keeping as default & click next:**
 
+
+
 ![policies](https://github.com/Ravivarman16/images/blob/main/EFS/FILE_POLICIES.png)
+
+
+---
+
 
 **12. Then review & create page will appear, just review the configurations, click create:**
 
+
+
 ![OUTPUT](https://github.com/Ravivarman16/images/blob/main/EFS/EFS_OUTPUT.png)
+
+
+---
+
 
 **13. Then the create EFS File system, then click attach option:**
 
+
+
 ![attach](https://github.com/Ravivarman16/images/blob/main/EFS/ATTACH_EFS.png)
 
+
+---
+
+
 **14. For attaching there will be two options:**
+
 + Mount via DNS
+
+
 + Mount via IP
+
+
 
 ![attach_options](https://github.com/Ravivarman16/images/blob/main/EFS/attach_options.png)
 
+
+
 Here I am selecting **Mount via DNS** option:
+
+
 
 ![MOUNTING_DNS](https://github.com/Ravivarman16/images/blob/main/EFS/MOUNTING_DNS.png)
 
+
+---
+
+
 **15. Then connect the instances and create a directory inside it with different name:**
 
+
 + **1st Instance:**
+
+
   
 ![1st](https://github.com/Ravivarman16/images/blob/main/EFS/instance_one.png)
 
+
+
 + **2nd Instance:**
+
+
   
 ![2nd](https://github.com/Ravivarman16/images/blob/main/EFS/instance_two.png)
 
 
+---
+
+
 **16. Copy the NFS Client DNS name and change the last word from efs to dir1 for 1st instance & dir2 for 2nd instance. Paste it on the instance servers respectively.**
 
+
+
 ![NFS_CLIENT](https://github.com/Ravivarman16/images/blob/main/EFS/copy_dns.png)
+
+
 
 + **1st Instance:**
     
       sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0f4a0a28b85c0ba96.efs.ap-south-1.amazonaws.com:/ dir1
 
+
 ![1st_instance_dns](https://github.com/Ravivarman16/images/blob/main/EFS/1st_instance_efs.png)
+
+
 
 + **2nd Instance:**
 
       sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0f4a0a28b85c0ba96.efs.ap-south-1.amazonaws.com:/ dir2
 
+
 ![2nd_instance_dns](https://github.com/Ravivarman16/images/blob/main/EFS/2nd_instance_efs.png)
+
+
+---
+
 
 **17. For checking create file under 2nd instance:**
 
+
+
 ![creating_file](https://github.com/Ravivarman16/images/blob/main/EFS/2nd%20instance%20creating%20file.png)
 
+
+
 **Checking in the 1st instance:**
+
+
 
 ![checking](https://github.com/Ravivarman16/images/blob/main/EFS/file_sharing.png)
 
 
 **We could able to see file created in 2nd instance its shared in 1st instance with the help of Amazon EFS.**
+
+---
 
 
 ## **To know more about Amazon EFS visit the [official website](https://aws.amazon.com/efs/)** 8-)
