@@ -32,10 +32,15 @@ ___
 ___
 
 ## **Amazon EFS performance attributes:**
+
+
 To support a variety of cloud storage workloads, **Amazon EFS** exposes attributes that enable you to control the performance of your file system. The performance attributes such as  
 + **performance mode.**
+
+
 + **Storage class.**
 + **Throughput mode.**
+
 
 **Performance mode:**
 
@@ -72,7 +77,10 @@ Under Throughput Mode there will be two types, such as
   - This mode enables you to grow beyond the limits allowed by the Bursting Throughput mode.
 
 ___
+
+
 ## **How Amazon EFS Works:**
+
 
 ![EFS_WORKS](https://github.com/Ravivarman16/images/blob/main/EFS/efs%20works.png)
 
