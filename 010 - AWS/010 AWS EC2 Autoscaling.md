@@ -136,102 +136,194 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 ## How to create AWS EC2 Autoscaling group:
 
-**1. Login into** [AWS Management Console:](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26nc2%3Dh_ct%26src%3Dheader-signin%26state%3DhashArgsFromTB_eu-north-1_67569bb514fd7334&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=O-19Kk8URbYdcSReZJtf-59QKpGm4u3dALUVrpv1Fj4&code_challenge_method=SHA-256)
+
+### **1. Login into** [AWS Management Console:](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26nc2%3Dh_ct%26src%3Dheader-signin%26state%3DhashArgsFromTB_eu-north-1_67569bb514fd7334&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=O-19Kk8URbYdcSReZJtf-59QKpGm4u3dALUVrpv1Fj4&code_challenge_method=SHA-256)
+
+
 
 ![Login](https://github.com/Ravivarman16/images/blob/main/Login%20into%20console.png)
 
-**2. Select the region, according to your preferences.**
+
+---
+
+
+### **2. Select the region, according to your preferences.**
+
 
 ![region](https://github.com/Ravivarman16/images/blob/main/region.png)
 
-**3. Create an AMI Image.**
+---
+
+
+### **3. Create an AMI Image.**
+
 
 **Example Source:**
 
+
 ![source](https://github.com/Ravivarman16/images/blob/main/SOURCE.png)
 
- + To create an AMI Image, under instances click actions, then click image and templates, then click create image:
+---
+
+### To create an AMI Image, under instances click actions, then click image and templates, then click create image:
+
+
 
 ![AMI](https://github.com/Ravivarman16/images/blob/main/AMI.png)
 
-**4. Create Launch Template:**
 
-  + Under EC2 Console, left-side, click Launch template:
+---
+
+
+### **4. Create Launch Template:**
+
+### Under EC2 Console, left-side, click Launch template:
+
+
 
 ![template](https://github.com/Ravivarman16/images/blob/main/launch%20template.png)
 
-**5. Create Target groups:**
 
-  + Under EC2 Management Console, Left-side, click target groups:
+---
+
+
+### **5. Create Target groups:**
+
+### Under EC2 Management Console, Left-side, click target groups:
+
+
 
 ![target](https://github.com/Ravivarman16/images/blob/main/Target%20group.png)
 
-**6. Create Load Balancer:**
 
-  + Under EC2 Management Console, Left-side, click Load balancers:
+---
+
+
+### **6. Create Load Balancer:**
+
+### Under EC2 Management Console, Left-side, click Load balancers:
+
+
 
 ![balancer](https://github.com/Ravivarman16/images/blob/main/Loadbalancer.png)
 
-**7. Create Amazon EC2 Autoscaling:**
 
-  + Under EC2 Management Console, Left-side, Click Auto Scaling Groups
+---
+
+
+### **7. Create Amazon EC2 Autoscaling:**
+
+### Under EC2 Management Console, Left-side, Click Auto Scaling Groups
+
 
 ![Autoscaling group](https://github.com/Ravivarman16/images/blob/main/AUTOSCALING.png) 
 
-  + Click Create Autoscaling group:
-  + Then naming and selecting the launch template, click next:
+
+### Click Create Autoscaling group, Then naming and selecting the launch template, click next:
+
 
 ![naming](https://github.com/Ravivarman16/images/blob/main/Naming%20the%20grouop%20.png)
 
-  + Then select the VPC and subnet, click next:
+
+---
+
+
+### Then select the VPC and subnet, click next:
+
 
 ![autoscaling-vpc](https://github.com/Ravivarman16/images/blob/main/AUTOSCALING%20VPC.png)
 
-  + Then select the Load Balancer and Target groups:
+
+---
+
+### Then select the Load Balancer and Target groups:
+
 
 ![selecting](https://github.com/Ravivarman16/images/blob/main/SELECTING%20LOAD%20BALANCER.png)
 
-  + Then select the health checks value according to your preference:
+
+---
+
+### Then select the health checks value according to your preference:
+
+
 
 ![health_checks](https://github.com/Ravivarman16/images/blob/main/Health%20checks.png)
 
-  + Then enter the desired, minimum and maximum value according to your preference:
+
+---
+
+
+### Then enter the desired, minimum and maximum value according to your preference:
+
+
 
 ![value](https://github.com/Ravivarman16/images/blob/main/INSTANCE_VALUE.png)
 
-  + Then select the scaling policies and enter the target value & instance warmup value:
+
+---
+
+
+### Then select the scaling policies and enter the target value & instance warmup value:
+
+
 
 ![scaling_policies](https://github.com/Ravivarman16/images/blob/main/SCALING_POLICIES.png)
 
-  + Adding notification (optional):
+
+---
+
+
+### Adding notification (optional):
+
+
 
 ![autoscaling_notification](https://github.com/Ravivarman16/images/blob/main/AUTOSCALING_NOTIFICATION.png)
 
-  + Adding tags:
+
+---
+
+
+### Adding tags:
+
+
 
 ![Autoscaling_tags](https://github.com/Ravivarman16/images/blob/main/AUTOSCALING%20TAGS.png)
 
-  + Then review & Create, finally autoscaling groups will be created:
+
+---
+
+
+### Then review & Create, finally autoscaling groups will be created:
+
 
 ![output](https://github.com/Ravivarman16/images/blob/main/AUTOSCALING_FINAL.png)
 
-  + Autoscaling group working:
 
-**Before:**
+---
+
+### Autoscaling group working:
+
+
+###  **Before:**
+
 
 ![before](https://github.com/Ravivarman16/images/blob/main/BEFORE.png)
 
-**Terminating the newly created instance:**
+
+### **Terminating the newly created instance:**
+
 
 ![Terminating](https://github.com/Ravivarman16/images/blob/main/TERMINATING.png)
 
-**After:**
+
+### **After:**
+
 
 ![Testing_output](https://github.com/Ravivarman16/images/blob/main/TESTING_OUTPUT.png)
 
 
-
-
+---
 
 
 ## Like to know more about AWS EC2 Autoscaling visit the [official website](https://aws.amazon.com/ec2/autoscaling/)
