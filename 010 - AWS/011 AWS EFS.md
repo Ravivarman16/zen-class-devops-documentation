@@ -124,25 +124,36 @@ ___
 
 ## **Amazon EFS use cases:**
 
-+ **Home directories:** Amazon EFS can provide storage for organizations that have many users who must access and share common datasets.
-+ **File system for enterprise applications:** Amazon EFS provides the scalability, elasticity, availability, and durability to be the file store for enterprise applications. Its standard file system interface, file system permissions, and directory hierarchy make it easy to migrate enterprise applications from on-premises environments to the AWS Cloud.
-+ **Application testing and development:** Amazon EFS provides your development environments with a common storage repository. With an Amazon EFS file system, you can share code and other files in a secure and organized way.
-+ **Database backups:** – Amazon EFS presents a standard file system that can be easily mounted with NFSv4 from database servers. It provides a way to create portable database backups with native application tools or enterprise backup applications.
-+ **Web serving and content management:** Amazon EFS provides a durable, high throughput file system for content management systems that store and serve information for a range of applications like websites, online publications, and archives.
-+ **Big Data analytics:** Amazon EFS provides scale and performance for big data applications that require high throughput to compute nodes. It also provides read-after-write consistency and low-latency file operations.
++ **Home directories:**
+
+
++ **File system for enterprise applications:** 
++ **Application testing and development:** 
++ **Database backups:** 
++ **Web serving and content management:** 
++ **Big Data analytics:** 
+
 
 ___
+
+
 
 ## **Amazon EFS Pricing:**
 
 + There is no minimum fee or setup charge.
+
+  
 + You pay only for the storage you use, for read and write access to data stored in Infrequent Access storage classes, for read and write access using Elastic Throughput, and for any Provisioned Throughput.
 + **Free tier:** Within your first 12 months on AWS, you can use up to 5 GB/month on the EFS Standard storage class at no charge.
 + To calculate your pricing use [AWS Prcing Calculator:](https://calculator.aws/#/)
 
+
 ![pricing](https://github.com/Ravivarman16/images/blob/main/EFS/storage_pricing.png)
 
+
 ___
+
+
 
 ## **Steps To Create Amazon EFS:**
 
