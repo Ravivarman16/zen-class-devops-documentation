@@ -1,13 +1,17 @@
 ---
 ## AWS EC2 Autoscaling:
 
-![ALB](https://github.com/Ravivarman16/images/blob/main/ALB.png)
+
+![ALB](https://github.com/Ravivarman16/images/blob/main/ALTER-ALB-MAIN.png)
+
 
 **AWS EC2 Autoscaling** helps you maintain application availability according to the demand by automatically adding or removing Amazon Elastic Compute Cloud (Amazon EC2) instances according to conditions that you define.
 
+
 **Example:**
 
-![example](https://github.com/Ravivarman16/images/blob/main/image.png)
+
+![example](https://github.com/Ravivarman16/images/blob/main/ALTER-EXAMPLE-ALB.png)
 
 ## Here are some key points about Amazon EC2 Autoscaling:
 **1. Launch configuration & Launch template:** The launch configuration is the place where we set up all the details needed to create virtual machines through an **Autoscaling group.** This includes crucial information like the
