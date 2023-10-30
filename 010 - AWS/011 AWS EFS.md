@@ -199,7 +199,7 @@ ___
 ---
 
 
-**4. Then search EFS on service panel:**
+### **4. Then search EFS on service panel:**
 
 
 
@@ -209,7 +209,7 @@ ___
 ---
 
 
-**5. Then click Create file system:**
+### **5. Then click Create file system:**
 
 
 
@@ -219,7 +219,7 @@ ___
 ---
 
 
-**6. Then name the EFS file system, select the VPC and Then select Customize option:**
+### **6. Then name the EFS file system, select the VPC and Then select Customize option:**
 
 
     
@@ -229,7 +229,7 @@ ___
 ---
 
 
-**7. Selecting the Storage class according to your preferences:**
+### **7. Selecting the Storage class according to your preferences:**
 
 
 
@@ -239,7 +239,7 @@ ___
 ---
 
 
-**8. Then under lifecycle management select according to your preferences:**
+### **8. Then under lifecycle management select according to your preferences:**
 
 
 ![management](https://github.com/Ravivarman16/images/blob/main/EFS/LIFECYCLE_MANAGEMENT.png)
@@ -248,7 +248,7 @@ ___
 ---
 
 
-**9. Then under performance settings:** 
+### **9. Then under performance settings:** 
 
 Throughput mode, there will be two options
 
@@ -269,7 +269,7 @@ Select according to your preferences: click next
 ---
 
 
-**10. Then select the VPC where your instance is running, mount the targets according to the instance availability zones, click next**
+### **10. Then select the VPC where your instance is running, mount the targets according to the instance availability zones, click next**
 
 
 
@@ -279,7 +279,7 @@ Select according to your preferences: click next
 ---
 
 
-**11. Under File policies keeping as default & click next:**
+### **11. Under File policies keeping as default & click next:**
 
 
 
@@ -289,7 +289,7 @@ Select according to your preferences: click next
 ---
 
 
-**12. Then review & create page will appear, just review the configurations, click create:**
+### **12. Then review & create page will appear, just review the configurations, click create:**
 
 
 
@@ -299,7 +299,7 @@ Select according to your preferences: click next
 ---
 
 
-**13. Then the create EFS File system, then click attach option:**
+### **13. Then the create EFS File system, then click attach option:**
 
 
 
@@ -309,7 +309,7 @@ Select according to your preferences: click next
 ---
 
 
-**14. For attaching there will be two options:**
+### **14. For attaching there will be two options:**
 
 + Mount via DNS
 
@@ -321,6 +321,7 @@ Select according to your preferences: click next
 ![attach_options](https://github.com/Ravivarman16/images/blob/main/EFS/attach_options.png)
 
 
+---
 
 Here I am selecting **Mount via DNS** option:
 
@@ -332,14 +333,14 @@ Here I am selecting **Mount via DNS** option:
 ---
 
 
-**15. Then connect the instances and create a directory inside it with different name:**
+### **15. Then connect the instances and create a directory inside it with different name:**
 
 
 + **1st Instance:**
 
 
   
-![1st](https://github.com/Ravivarman16/images/blob/main/EFS/instance_one.png)
+![1st](https://github.com/Ravivarman16/images/blob/main/EFS/ALTER-1ST-ONE-EFS.png)
 
 
 
@@ -347,13 +348,13 @@ Here I am selecting **Mount via DNS** option:
 
 
   
-![2nd](https://github.com/Ravivarman16/images/blob/main/EFS/instance_two.png)
+![2nd](https://github.com/Ravivarman16/images/blob/main/EFS/ALTER-EFS-2ND-INSTANCE.png)
 
 
 ---
 
 
-**16. Copy the NFS Client DNS name and change the last word from efs to dir1 for 1st instance & dir2 for 2nd instance. Paste it on the instance servers respectively.**
+### **16. Copy the NFS Client DNS name and change the last word from efs to dir1 for 1st instance & dir2 for 2nd instance. Paste it on the instance servers respectively.**
 
 
 
@@ -381,7 +382,7 @@ Here I am selecting **Mount via DNS** option:
 ---
 
 
-**17. For checking create file under 2nd instance:**
+### **17. For checking create file under 2nd instance:**
 
 
 
@@ -389,14 +390,14 @@ Here I am selecting **Mount via DNS** option:
 
 
 
-**Checking in the 1st instance:**
+### **Checking in the 1st instance:**
 
 
 
 ![checking](https://github.com/Ravivarman16/images/blob/main/EFS/file_sharing.png)
 
 
-**We could able to see file created in 2nd instance its shared in 1st instance with the help of Amazon EFS.**
+### **We could able to see file created in 2nd instance its shared in 1st instance with the help of Amazon EFS.**
 
 ---
 
