@@ -19,17 +19,19 @@ __AWS EC2 Autoscaling__ helps you maintain application availability according to
 
 **1. Launch configuration & Launch template:** The launch configuration is the place where we set up all the details needed to create virtual machines through an **Autoscaling group.** This includes crucial information like the
 
-+ Amazon Machine Image (AMI), 
++ **Amazon Machine Image (AMI)**
 
 
-+ instance type, 
-+ security group settings, 
-+ key pair for secure access, 
-+ storage specifications, 
-+ IAM roles for permissions, 
-+ user data. 
++ **Instance type**
++ **Security group settings**
++ **Key pair for secure access**
++ **Storage specifications**
++ **IAM roles for permissions**
++ **User data**
 
 To simplify and replicate these settings easily, we create a **launch template.** This template captures the standardized configuration, ensuring that instances can be deployed consistently and at scale within the designated Autoscaling group.
+
+---
 
 
 **2. Amazon EC2 Autoscaling group:** is configured to manage the dynamic scaling of instances based on varying demands. It includes specifications on the number of instances to launch when there's a high load or demand, the minimum number of instances to maintain, and the desired number of instances for optimal performance. This setup allows for automatic adjustment of resources to ensure efficient and responsive scaling in response to changing conditions or requirements.
@@ -38,18 +40,21 @@ To simplify and replicate these settings easily, we create a **launch template.*
 ![grp](https://github.com/Ravivarman16/images/blob/main/autoscaling_group.png)
 
 
+---
+
+
 **3. Amazon EC2 Autoscaling Policy:** is a set of rules and instructions that govern the scaling behavior of an Autoscaling group in response to changing conditions. These policies define how the group should scale its capacity up or down based on criteria such as increased demand, decreased load, or other performance metrics.
 
-+ Scheduled Scaling
++ **Scheduled Scaling**
 
-+ Dynamic Scaling:
++ **Dynamic Scaling:**
 
-  + Target tracking policy
+  + **Target tracking policy**
 
 
-   + Step scaling
-  + Simple scaling  
-+  Predictive scaling
+   + **Step scaling**
+  + **Simple scaling**
++  **Predictive scaling**
 
 
 ![policies](https://github.com/Ravivarman16/images/blob/main/types%20of%20policies.png)
@@ -59,40 +64,75 @@ To simplify and replicate these settings easily, we create a **launch template.*
 
 
 ## Types of Termination policies in AWS Ec2 Autoscaling:
+
 Amazon EC2 Auto Scaling supports custom termination policies, they are
  
   +  **OldestInstance:** Selects the longest running instance.
+ 
+  
   +  **NewestInstance:** Selects the shortest running instance.
   +  **OldestLaunchConfiguration:** Terminates the instance with the oldest configuration(default).
   +  **ClosestToNextInstanceHour:** Terminates the instance that is closest to the next billable hour(default).
 
+---
+
+
 ## Ways to Work with Auto Scaling groups:
+
 You can create, access, and manage your Auto Scaling groups using any of the following interfaces:
+  
   +  **AWS Management Console:** 
+
+  
   +  **AWS Command Line Interface (AWS CLI):** 
   +  **AWS Tools for Windows PowerShell:** 
   +  **AWS SDKs:** 
   +  **AWS CloudFormation:**
 
+
+---
+
 ## Services that can integrated with Amazon EC2 Autoscaling:
+
+
 Some of the services that be combined or integrated with Amazon EC2 Autoscaling are
   
   + **AWS ECS (Elastic Container Service)**
+ 
+  
   + **AWS EKS (Elastic Kubernetes Service)**
   + **AWS EC2 (Elastic Compute Cloud)**
   + **AWS CloudWatch**
 
+
+
 ![integration](https://github.com/Ravivarman16/images/blob/main/integration.png)
 
+
+---
+
+
 ## Amazon EC2 Auto Scaling benefits:
+  
   + **Better fault tolerance:** Amazon EC2 Auto Scaling can detect when an instance is unhealthy, terminate it, and launch an instance to replace it.
+  
+  
   + **Better availability:** Amazon EC2 Auto Scaling helps ensure that your application always has the right amount of capacity to handle the current traffic demand.
   + **Better cost management:** Amazon EC2 Auto Scaling can dynamically increase and decrease capacity as needed. Because you pay for the EC2 instances you use, you save money by launching instances when they are needed and terminating them when they aren't.
   + **Distribute instances across Availability Zones:** If one Availability Zone becomes unavailable, Amazon EC2 Auto Scaling can launch instances in another one to compensate.
 
+---
+
+
 ## Pricing for Amazon EC2 Auto Scaling:
-There are no additional fees with Amazon EC2 Auto Scaling, so it's easy to try it out and see how it can benefit your AWS architecture. You only pay for the AWS resources (for example, EC2 instances, EBS volumes, and CloudWatch alarms) that you use.
-To calculate the price use [AWS Pricing calculator](https://calculator.aws/#/).
+
++ There are no additional fees with Amazon EC2 Auto Scaling, so it's easy to try it out and see how it can benefit your AWS architecture. You only pay for the AWS resources (for example, EC2 instances, EBS volumes, and CloudWatch alarms) that you use.
+
++ To calculate the price use [AWS Pricing calculator](https://calculator.aws/#/).
+
+
+---
+
 
 ## How to create AWS EC2 Autoscaling group:
 
