@@ -163,7 +163,6 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 ![source](https://github.com/Ravivarman16/images/blob/main/SOURCE.png)
 
----
 
 ### To create an AMI Image, under instances click actions, then click image and templates, then click create image:
 
@@ -311,11 +310,14 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 ![before](https://github.com/Ravivarman16/images/blob/main/BEFORE.png)
 
 
+---
+
 ### **Terminating the newly created instance:**
 
 
 ![Terminating](https://github.com/Ravivarman16/images/blob/main/TERMINATING.png)
 
+---
 
 ### **After:**
 
