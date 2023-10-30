@@ -1,7 +1,11 @@
 # **Amazon Elastic File Storage (EFS)**
 
 ![EFS](https://github.com/Ravivarman16/images/blob/main/EFS/EFS%20OVERVIEW.png) 
+
+
 + **Amazon Elastic File System (Amazon EFS)** is a simple, scalable, serverless, fully managed elastic (**network file system**) NFS storage.
+
+  
 + so that you can share file data without **provisioning or managing storage capacity and performance.**
 + Amazon EFS is built to scale **on demand to petabytes** without disrupting applications.
 + You can use Amazon EFS with AWS Cloud services and **on-premises resources.**
