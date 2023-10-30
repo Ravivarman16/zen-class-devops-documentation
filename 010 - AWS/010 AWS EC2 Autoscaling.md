@@ -11,11 +11,20 @@
 ## **Example:**
 
 
+
 ![example](https://github.com/Ravivarman16/images/blob/main/ALTER-EXAMPLE-ALB-EC2.png)
 
+
+---
+
+
 ## Here are some key points about Amazon EC2 Autoscaling:
+
 **1. Launch configuration & Launch template:** The launch configuration is the place where we set up all the details needed to create virtual machines through an **Autoscaling group.** This includes crucial information like the
- + Amazon Machine Image (AMI), 
+
++ Amazon Machine Image (AMI), 
+
+
 + instance type, 
 + security group settings, 
 + key pair for secure access, 
@@ -25,20 +34,32 @@
 
 To simplify and replicate these settings easily, we create a **launch template.** This template captures the standardized configuration, ensuring that instances can be deployed consistently and at scale within the designated Autoscaling group.
 
+
 **2. Amazon EC2 Autoscaling group:** is configured to manage the dynamic scaling of instances based on varying demands. It includes specifications on the number of instances to launch when there's a high load or demand, the minimum number of instances to maintain, and the desired number of instances for optimal performance. This setup allows for automatic adjustment of resources to ensure efficient and responsive scaling in response to changing conditions or requirements.
 
+
 ![grp](https://github.com/Ravivarman16/images/blob/main/autoscaling_group.png)
+
 
 **3. Amazon EC2 Autoscaling Policy:** is a set of rules and instructions that govern the scaling behavior of an Autoscaling group in response to changing conditions. These policies define how the group should scale its capacity up or down based on criteria such as increased demand, decreased load, or other performance metrics.
 
 + Scheduled Scaling
+
 + Dynamic Scaling:
+
   + Target tracking policy
-  + Step scaling
+
+
+   + Step scaling
   + Simple scaling  
 +  Predictive scaling
 
+
 ![policies](https://github.com/Ravivarman16/images/blob/main/types%20of%20policies.png)
+
+
+---
+
 
 ## Types of Termination policies in AWS Ec2 Autoscaling:
 Amazon EC2 Auto Scaling supports custom termination policies, they are
