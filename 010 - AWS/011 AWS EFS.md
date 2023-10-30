@@ -402,4 +402,4 @@ Here I am selecting **Mount via DNS** option:
 ---
 
 
-## **To know more about Amazon EFS visit the [official website](https://aws.amazon.com/efs/)** 8-)
+## **To know more about Amazon EFS visit the [official website](https://aws.amazon.com/efs/):** 
