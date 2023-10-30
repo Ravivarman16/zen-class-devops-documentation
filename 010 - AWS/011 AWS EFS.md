@@ -87,28 +87,40 @@ ___
 
 ![EFS_WORKS](https://github.com/Ravivarman16/images/blob/main/EFS/efs%20works.png)
 
+
 + With Amazon EFS, you can create a file system, mount the file system on an Amazon EC2 instance.
+
 
 + And then read and write data from to and from your file system. 
 + You can mount an Amazon EFS file system in your VPC, through the Network File System versions 4.0 and 4.1 (NFSv4) protocol.
 + You can access your Amazon EFS file system concurrently from Amazon EC2 instances in your Amazon VPC, so applications that scale beyond a single connection can access a file system. 
 + Amazon EC2 instances running in multiple Availability Zones within the same AWS Region can access the file system, so that many users can access and share a common data source.
 
+
 **Example Architecture:**
+
 
 ![example](https://github.com/Ravivarman16/images/blob/main/EFS/efs-ec2-how-it-works-Regional.png)
 
 ___
 
+
 ## **Ways to access Amazon EFS:**
+
 Amazon EFS can be accessed via 
+
 + **Management Console**
+
+
 + **API**
 + **Command Line Interface**
 
+
 ![INTEGRATE](https://github.com/Ravivarman16/images/blob/main/EFS/INTEGRATE.png)
 
+
 ___
+
 
 ## **Amazon EFS use cases:**
 
