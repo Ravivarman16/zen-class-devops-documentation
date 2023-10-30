@@ -10,15 +10,25 @@
 + Amazon EFS is built to scale **on demand to petabytes** without disrupting applications.
 + You can use Amazon EFS with AWS Cloud services and **on-premises resources.**
 + It is easy to use and offers a simple interface that enables you to create and configure file systems **quickly and easily.**
+
 ___
+
+
 # **Amazon EFS Features:**
-+ **Fully managed:** It is a fully managed service providing NFS shared file system storage for Linux workloads. You needn’t worry about managing file servers or storage, updating hardware, configuring software, or performing backups.
+
+
++ **Fully managed:** It is a fully managed service providing NFS shared file system storage for Linux workloads.
+
+  
 + **Highly available and durable:** Amazon EFS is designed for 99.999999999 percent (11 nines) of durability and up to 99.99 percent (4 nines) of availability. 
 + **Shared file storage with NFS v4.0 and v4.1 support:** Amazon EFS provides secure access for thousands of connections for Amazon Elastic Compute Cloud (EC2) instances, as well as AWS container and serverless compute services. 
 + **Elastic & scalable capacity:** Amazon EFS is built to elastically scale on demand without disrupting applications, you’re **billed only for what you use.**
-+ **Encryption:** Amazon EFS provides a comprehensive encryption solution to help you secure both your stored data and data in flight. Data at rest is transparently encrypted using encryption keys managed by the AWS Key Management Service (KMS).
++ **Encryption:** Amazon EFS provides a comprehensive encryption solution to help you secure both your stored data and data in flight.
+
 
 ![FEATURES](https://github.com/Ravivarman16/images/blob/main/EFS/EFS_FEATURES.png)
+
+
 ___
 
 ## **Amazon EFS performance attributes:**
