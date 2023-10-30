@@ -57,6 +57,8 @@ Under Performance mode, there will be two types:
 
   - Note that you cannot change the performance mode of a file system after it has been created.
 
+---
+
 **Storage Class:**
 
 Amazon EFS offers a two types of storage classes, such as 
@@ -65,6 +67,7 @@ Amazon EFS offers a two types of storage classes, such as
 
 + **Infrequent Access Storage Class:** It is a lower-cost storage class that is cost-optimized for storing long-lived, infrequently accessed files.
 
+---
 
 **Throughput Mode:**
 
