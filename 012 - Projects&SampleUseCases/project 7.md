@@ -30,3 +30,26 @@
 ![console](https://github.com/Ravivarman16/images/blob/main/Login%20into%20console.png)
 
 
+---
+
+
+### **2. Select the region, according to your preferences.**
+
+
+![region](https://github.com/Ravivarman16/images/blob/main/region.png)
+
+
+---
+
+
+### **3. On the search panel search EC2, click that one:**
+
+
+![EC2_SEARCH](https://github.com/Ravivarman16/images/blob/main/PROJECT-7/SEARCH_EC2.png)
+
+
+---
+
+
+
+
