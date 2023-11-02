@@ -59,4 +59,22 @@
 ---
 
 
+### **5. Then name the instance according to your preferences:**
+
+
+
+![NAMING_INSTANCE](https://github.com/Ravivarman16/images/blob/main/PROJECT-7/NAMING_INSTANCE.png)
+
+
+
+---
+
+
+### **6. Then select AMI Image for the instance. Here you can choose AMI Image according to your preferences:**
+
+
+![AMI_IMAGE](https://github.com/Ravivarman16/images/blob/main/PROJECT-7/AMI_IMAGE.png)
+
+
+---
 
