@@ -1,6 +1,7 @@
 # **Amazon Elastic File Storage (EFS)**
 
-![EFS](https://github.com/Ravivarman16/images/blob/main/EFS/EFS%20OVERVIEW.png) 
+![EFS OVERVIEW](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/08403bcb-f0af-487a-88d1-9f0ab21f0c3a)
+
 
 
 + **Amazon Elastic File System (Amazon EFS)** is a simple, scalable, serverless, fully managed elastic (**network file system**) NFS storage.
@@ -26,7 +27,8 @@ ___
 + **Encryption:** Amazon EFS provides a comprehensive encryption solution to help you secure both your stored data and data in flight.
 
 
-![FEATURES](https://github.com/Ravivarman16/images/blob/main/EFS/EFS_FEATURES.png)
+![EFS_FEATURES](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/31255212-b735-437d-8268-1c9cb54bb4e1)
+
 
 
 ___
@@ -85,7 +87,8 @@ ___
 ## **How Amazon EFS Works:**
 
 
-![EFS_WORKS](https://github.com/Ravivarman16/images/blob/main/EFS/efs%20works.png)
+![efs works](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/9015be2e-d2cb-48bb-9948-e1860b1f1ab5)
+
 
 
 + With Amazon EFS, you can create a file system, mount the file system on an Amazon EC2 instance.
@@ -100,7 +103,8 @@ ___
 **Example Architecture:**
 
 
-![example](https://github.com/Ravivarman16/images/blob/main/EFS/efs-ec2-how-it-works-Regional.png)
+![efs-ec2-how-it-works-Regional](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/f3c7e4b1-f888-4245-97c6-95f7f15d71dc)
+
 
 ___
 
@@ -116,7 +120,7 @@ Amazon EFS can be accessed via
 + **Command Line Interface**
 
 
-![INTEGRATE](https://github.com/Ravivarman16/images/blob/main/EFS/INTEGRATE.png)
+![REWORK_INTEGRATE](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/004b8a1f-12c5-4a73-8dba-6f145f32ad40)
 
 
 ___
@@ -148,7 +152,8 @@ ___
 + To calculate your pricing use [AWS Prcing Calculator:](https://calculator.aws/#/)
 
 
-![pricing](https://github.com/Ravivarman16/images/blob/main/EFS/storage_pricing.png)
+![storage_pricing](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/d1b08e21-3ba8-4ad8-a24e-0c5ccd7ec6ba)
+
 
 
 ___
