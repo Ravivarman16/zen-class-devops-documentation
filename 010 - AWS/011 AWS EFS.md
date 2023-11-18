@@ -210,7 +210,8 @@ ___
 
 
 
-![EFS](https://github.com/Ravivarman16/images/blob/main/EFS/EFS.png)
+![EFS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/29ac8432-3149-435e-ba53-7fe49c4c3cca)
+
 
 
 ---
@@ -220,7 +221,8 @@ ___
 
 
 
-![CREATE_EFS](https://github.com/Ravivarman16/images/blob/main/EFS/CREATE_EFS.png)
+![CREATE_EFS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/d8583395-5526-471c-88a0-52157c5f425e)
+
 
 
 ---
@@ -230,7 +232,8 @@ ___
 
 
     
-![CREATION](https://github.com/Ravivarman16/images/blob/main/EFS/CUSTOMIZE.png)
+![CUSTOMIZE](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/73a32cad-7b57-438f-b68b-c60afd020ac6)
+
 
 
 ---
@@ -240,7 +243,8 @@ ___
 
 
 
-![storage_class](https://github.com/Ravivarman16/images/blob/main/EFS/STORAGE_CLASS_SELECTING.png)
+![STORAGE_CLASS_SELECTING](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/4194045e-8582-4a3f-a9b7-8d54d055f60e)
+
 
 
 ---
@@ -249,7 +253,8 @@ ___
 ### **8. Then under lifecycle management select according to your preferences:**
 
 
-![management](https://github.com/Ravivarman16/images/blob/main/EFS/LIFECYCLE_MANAGEMENT.png)
+![LIFECYCLE_MANAGEMENT](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/c4242bf9-ef24-4395-bb81-877a60f9ea69)
+
 
 
 ---
@@ -270,7 +275,8 @@ Select according to your preferences: click next
 
 
 
-![performance](https://github.com/Ravivarman16/images/blob/main/EFS/performance_enhanced.png)
+![performance_enhanced](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/d387c482-41e7-454b-a88d-4e7d87dc11ec)
+
 
 
 ---
@@ -280,7 +286,8 @@ Select according to your preferences: click next
 
 
 
-![mount](https://github.com/Ravivarman16/images/blob/main/EFS/mount_targets.png)
+![mount_targets](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/d16513b4-a1b7-4895-9138-61a07b137d70)
+
 
 
 ---
@@ -290,7 +297,8 @@ Select according to your preferences: click next
 
 
 
-![policies](https://github.com/Ravivarman16/images/blob/main/EFS/FILE_POLICIES.png)
+![FILE_POLICIES](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/0d28e804-51fa-4aef-9c59-1e56017654e2)
+
 
 
 ---
@@ -300,7 +308,8 @@ Select according to your preferences: click next
 
 
 
-![OUTPUT](https://github.com/Ravivarman16/images/blob/main/EFS/EFS_OUTPUT.png)
+![EFS_OUTPUT](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/ba807baf-4ee5-45f7-b85d-b7c0b7baf5f9)
+
 
 
 ---
@@ -310,7 +319,8 @@ Select according to your preferences: click next
 
 
 
-![attach](https://github.com/Ravivarman16/images/blob/main/EFS/ATTACH_EFS.png)
+![ATTACH_EFS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/0171f53a-feae-48ee-ba6c-b5667be12163)
+
 
 
 ---
@@ -325,7 +335,8 @@ Select according to your preferences: click next
 
 
 
-![attach_options](https://github.com/Ravivarman16/images/blob/main/EFS/attach_options.png)
+![attach_options](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/4064eb20-b22a-44a3-9268-4d70bce84d8a)
+
 
 
 ---
@@ -334,7 +345,8 @@ Here I am selecting **Mount via DNS** option:
 
 
 
-![MOUNTING_DNS](https://github.com/Ravivarman16/images/blob/main/EFS/MOUNTING_DNS.png)
+![MOUNTING_DNS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/7b3b9b2a-bc6b-4afd-89ef-66749e663694)
+
 
 
 ---
@@ -347,7 +359,8 @@ Here I am selecting **Mount via DNS** option:
 
 
   
-![1st](https://github.com/Ravivarman16/images/blob/main/EFS/ALTER-1ST-ONE-EFS.png)
+![ALTER-1ST-ONE-EFS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/805b7b8f-9094-4c33-af90-8601a34afca2)
+
 
 
 
@@ -355,7 +368,8 @@ Here I am selecting **Mount via DNS** option:
 
 
   
-![2nd](https://github.com/Ravivarman16/images/blob/main/EFS/ALTER-EFS-2ND-INSTANCE.png)
+![ALTER-EFS-2ND-INSTANCE](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/c6e86054-c8c3-431e-806e-cb97cca798cc)
+
 
 
 ---
@@ -365,7 +379,7 @@ Here I am selecting **Mount via DNS** option:
 
 
 
-![NFS_CLIENT](https://github.com/Ravivarman16/images/blob/main/EFS/copy_dns.png)
+![copy_dns](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/a404a42d-d804-4247-bfa1-a0120e3eb875)
 
 
 
@@ -374,7 +388,8 @@ Here I am selecting **Mount via DNS** option:
       sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0f4a0a28b85c0ba96.efs.ap-south-1.amazonaws.com:/ dir1
 
 
-![1st_instance_dns](https://github.com/Ravivarman16/images/blob/main/EFS/1st_instance_efs.png)
+![1st_instance_efs](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/f53770f3-828d-4b4a-9a61-0be090625563)
+
 
 
 
@@ -383,7 +398,8 @@ Here I am selecting **Mount via DNS** option:
       sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0f4a0a28b85c0ba96.efs.ap-south-1.amazonaws.com:/ dir2
 
 
-![2nd_instance_dns](https://github.com/Ravivarman16/images/blob/main/EFS/2nd_instance_efs.png)
+![2nd_instance_efs](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/3dd93efd-ef93-4e55-87c8-f91bd5a5b061)
+
 
 
 ---
@@ -393,7 +409,8 @@ Here I am selecting **Mount via DNS** option:
 
 
 
-![creating_file](https://github.com/Ravivarman16/images/blob/main/EFS/2nd%20instance%20creating%20file.png)
+![2nd instance creating file](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/9d99db03-72e5-454e-83bc-1d4fc6f9d4dd)
+
 
 
 
@@ -401,7 +418,8 @@ Here I am selecting **Mount via DNS** option:
 
 
 
-![checking](https://github.com/Ravivarman16/images/blob/main/EFS/file_sharing.png)
+![file_sharing](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/80f2289d-9fd7-41ec-8a42-8299defb3c23)
+
 
 
 ### **We could able to see file created in 2nd instance its shared in 1st instance with the help of Amazon EFS.**
