@@ -167,7 +167,8 @@ ___
 
 
 
-![Login](https://github.com/Ravivarman16/images/blob/main/Login%20into%20console.png)
+![LOGIN_PAGE](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/a18c5b3a-8848-44e0-ae18-c03a24d98bb3)
+
 
 
 
@@ -178,7 +179,8 @@ ___
 
 
 
-![INSTANCES_EFS](https://github.com/Ravivarman16/images/blob/main/EFS/INSTANCE_EFS.png)
+![INSTANCE_EFS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/e04c02a1-b0c2-413c-8c8d-94ecfdbd7301)
+
 
 
 ---
