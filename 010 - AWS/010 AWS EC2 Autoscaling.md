@@ -146,7 +146,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 
 
-![Login](https://github.com/Ravivarman16/images/blob/main/Login%20into%20console.png)
+![LOGIN_PAGE](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/3ea12109-c5fd-4485-8381-64a74ef6d555)
+
 
 
 ---
@@ -155,7 +156,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 ### **2. Select the region, according to your preferences.**
 
 
-![region](https://github.com/Ravivarman16/images/blob/main/region.png)
+![region](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/58c8c795-f8e4-48f0-affd-ef125d6ac017)
+
 
 ---
 
@@ -166,14 +168,15 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 **Example Source:**
 
 
-![source](https://github.com/Ravivarman16/images/blob/main/SOURCE.png)
+![SOURCE_WEB](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/5a9c4777-d4c7-4058-93e3-b59f8fec9983)
+
 
 
 ### To create an AMI Image, under instances click actions, then click image and templates, then click create image:
 
 
 
-![AMI](https://github.com/Ravivarman16/images/blob/main/AMI.png)
+![AMI](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/fe5ed3d2-3acd-4ab1-9228-c31b9cc9a558)
 
 
 ---
@@ -185,7 +188,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 
 
-![template](https://github.com/Ravivarman16/images/blob/main/launch%20template.png)
+![launch template](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/9d295725-98ae-4c61-bd0d-3070ea2db880)
+
 
 
 ---
@@ -197,7 +201,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 
 
-![target](https://github.com/Ravivarman16/images/blob/main/Target%20group.png)
+![Target group](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/15e544fb-b5fd-4a6a-999e-dd0125db6a15)
+
 
 
 ---
@@ -209,7 +214,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 
 
-![balancer](https://github.com/Ravivarman16/images/blob/main/Loadbalancer.png)
+![Loadbalancer](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/1845f367-9ff6-4e0e-ac8f-7918aab69c48)
+
 
 
 ---
@@ -220,13 +226,15 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 ### Under EC2 Management Console, Left-side, Click Auto Scaling Groups
 
 
-![Autoscaling group](https://github.com/Ravivarman16/images/blob/main/AUTOSCALING.png) 
+![AUTOSCALING](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/cee574d9-5f79-4813-bf80-e23c8d448004)
+
 
 
 ### Click Create Autoscaling group, Then naming and selecting the launch template, click next:
 
 
-![naming](https://github.com/Ravivarman16/images/blob/main/Naming%20the%20grouop%20.png)
+![Naming the grouop ](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/d9f3237b-347d-4abc-9ba4-40f7a09345b3)
+
 
 
 ---
@@ -235,7 +243,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 ### Then select the VPC and subnet, click next:
 
 
-![autoscaling-vpc](https://github.com/Ravivarman16/images/blob/main/AUTOSCALING%20VPC.png)
+![AUTOSCALING VPC](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/43c52473-3052-45fa-9587-fa51c9e3b710)
+
 
 
 ---
@@ -243,7 +252,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 ### Then select the Load Balancer and Target groups:
 
 
-![selecting](https://github.com/Ravivarman16/images/blob/main/SELECTING%20LOAD%20BALANCER.png)
+![SELECTING LOAD BALANCER](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/ca6b4de0-40bd-460e-821c-a5c853125ec6)
+
 
 
 ---
@@ -252,7 +262,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 
 
-![health_checks](https://github.com/Ravivarman16/images/blob/main/Health%20checks.png)
+![Health checks](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/96760741-08a2-4f0d-8cb9-a5ffa6810d85)
+
 
 
 ---
@@ -262,7 +273,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 
 
-![value](https://github.com/Ravivarman16/images/blob/main/INSTANCE_VALUE.png)
+![INSTANCE_VALUE](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/bc397dd1-6d34-4960-ade0-b18304bd41fd)
+
 
 
 ---
@@ -272,7 +284,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 
 
-![scaling_policies](https://github.com/Ravivarman16/images/blob/main/SCALING_POLICIES.png)
+![SCALING_POLICIES](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/ac524895-701c-46be-944d-943be344bdda)
+
 
 
 ---
@@ -282,7 +295,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 
 
-![autoscaling_notification](https://github.com/Ravivarman16/images/blob/main/AUTOSCALING_NOTIFICATION.png)
+![AUTOSCALING_NOTIFICATION](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/55a90f53-d728-4926-b198-651e063d61fb)
+
 
 
 ---
@@ -292,7 +306,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 
 
-![Autoscaling_tags](https://github.com/Ravivarman16/images/blob/main/AUTOSCALING%20TAGS.png)
+![AUTOSCALING TAGS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/0ccec844-c86a-43b0-a3da-8c573c7bdacd)
+
 
 
 ---
@@ -301,7 +316,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 ### Then review & Create, finally autoscaling groups will be created:
 
 
-![output](https://github.com/Ravivarman16/images/blob/main/AUTOSCALING_FINAL.png)
+![AUTOSCALING_FINAL](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/412cfc19-3aca-4bb0-90b4-94a8124ce8b0)
+
 
 
 ---
@@ -312,7 +328,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 ###  **Before:**
 
 
-![before](https://github.com/Ravivarman16/images/blob/main/BEFORE.png)
+![BEFORE](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/e71e9b59-9e7f-4b26-bc2e-1a02b534455a)
+
 
 
 ---
@@ -320,14 +337,16 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 ### **Terminating the newly created instance:**
 
 
-![Terminating](https://github.com/Ravivarman16/images/blob/main/TERMINATING.png)
+![TERMINATING](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/25b3ed0a-7441-48b1-9ba9-771fa2514f1b)
+
 
 ---
 
 ### **After:**
 
 
-![Testing_output](https://github.com/Ravivarman16/images/blob/main/TESTING_OUTPUT.png)
+![TESTING_OUTPUT](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/dc0e8d67-a37b-49c3-aee2-97c0e008813e)
+
 
 
 ---
