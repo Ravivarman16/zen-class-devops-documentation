@@ -2,14 +2,16 @@
 
 ## **AWS EC2 AUTOSCALING**
 
-![INTRO](https://github.com/Ravivarman16/images/blob/main/ALTER-ALB-MAIN.png)
+![ALTER-ALB-MAIN](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/1a7d4696-1c75-48b6-adeb-5bbef322dd65)
+
 
 __AWS EC2 Autoscaling__ helps you maintain application availability according to the demand by automatically adding or removing Amazon Elastic Compute Cloud (Amazon EC2) instances according to conditions that you define.
 
 ### **Example:**
 
 
-![example](https://github.com/Ravivarman16/images/blob/main/ALTER-EXAMPLE-ALB-EC2.png)
+![ALTER-EXAMPLE-ALB-EC2](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/7483a51d-67ad-4b32-94f3-65c88db8e6fb)
+
 
 
 ---
@@ -37,7 +39,8 @@ To simplify and replicate these settings easily, we create a **launch template.*
 **2. Amazon EC2 Autoscaling group:** is configured to manage the dynamic scaling of instances based on varying demands. It includes specifications on the number of instances to launch when there's a high load or demand, the minimum number of instances to maintain, and the desired number of instances for optimal performance. This setup allows for automatic adjustment of resources to ensure efficient and responsive scaling in response to changing conditions or requirements.
 
 
-![grp](https://github.com/Ravivarman16/images/blob/main/autoscaling_group.png)
+![autoscaling_group](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/95a76c2f-5c79-4f15-a830-356e15e78a79)
+
 
 
 ---
@@ -57,7 +60,8 @@ To simplify and replicate these settings easily, we create a **launch template.*
 +  **Predictive scaling**
 
 
-![policies](https://github.com/Ravivarman16/images/blob/main/types%20of%20policies.png)
+![types of policies](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/76503764-7bfb-45d1-97c9-230b4f5bfe51)
+
 
 
 ---
@@ -106,7 +110,8 @@ Some of the services that be combined or integrated with Amazon EC2 Autoscaling 
 
 
 
-![integration](https://github.com/Ravivarman16/images/blob/main/integration.png)
+![integration](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/4bd94f77-6ebb-4863-845b-0bb83d164b3d)
+
 
 
 ---
