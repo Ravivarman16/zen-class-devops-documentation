@@ -16,7 +16,7 @@ Storage is a critical category in cloud computing, and Amazon Web Services (AWS)
 ## **Amazon Storage Service Categories:**
 
 
-The main AWS Cloud storage services are grouped into four categories:
+The main AWS Cloud storage services are grouped into three categories:
 
 +  **Block Storage:**
 
@@ -38,13 +38,12 @@ The main AWS Cloud storage services are grouped into four categories:
  
    - Amazon FSx for Windows File Server
      
-+  **Hybrid Cloud Storage:**
-
-   -  Amazon Storage Gateway
 
 
 
-![TYPES OF STORAGE SERVICES](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/58c0a0b6-1823-4c5f-992b-83e130771cf5)
+
+![TYPES](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/8cf1d29f-6eaa-463f-b469-11ce0d1823c8)
+
 
 
 ---
@@ -156,6 +155,9 @@ Amazon Web Services provide two types of Block Storages, they are
 
 
 
+### **To know more about [Instance Store just click here:](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html)**
+
+
 ---
 
 
@@ -206,6 +208,10 @@ Amazon Web Services provide two types of Block Storages, they are
 
 
 ![EBS_WORKS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/7d5df190-c7dd-4009-8ddd-e7da4e2dc75d)
+
+
+
+### **To know more about [Elastic Block Storage just click here:](https://aws.amazon.com/ebs/)**
 
 
 
@@ -316,7 +322,7 @@ Some of the use cases of amazon S3 include:
 
 
 
-## To know more about [Amazon S3 just click here](https://github.com/zen-class/zen-class-devops-documentation/blob/main/010%20-%20AWS/005%20S3.md)
+## **To know more about [Amazon S3 just click here](https://github.com/zen-class/zen-class-devops-documentation/blob/main/010%20-%20AWS/005%20S3.md)**
 
 
 
@@ -434,5 +440,24 @@ The most important File Storage Service provided by Amazon Web Services are
 ![EFS WORKS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/a683c66f-8a96-4df0-ba48-72c1985b44f6)
 
 
+### **To know more [Elastic File Storage just click here:](https://aws.amazon.com/efs/)**
+
+
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
