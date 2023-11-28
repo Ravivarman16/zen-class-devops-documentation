@@ -1,472 +1,438 @@
+#  **AMAZON STORAGE SERVICES**
+
+
+
+![AWS_STORAGE_SERVICE](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/424a4d21-4e36-4409-baa2-6dd340e5f37b)
+
+
+
+Storage is a critical category in cloud computing, and Amazon Web Services (AWS) provides an extensive suite of storage services that empower businesses to securely and efficiently manage their data across diverse use cases. These services are designed to offer scalable, durable, and cost-effective storage solutions, addressing the dynamic needs of modern applications and enterprises.
+
+
+
+---
+
+
+## **Amazon Storage Service Categories:**
+
+
+The main AWS Cloud storage services are grouped into four categories:
+
++  **Block Storage:**
+
+   -  Elastic Block Storage(EBS)
  
-<img src="https://github.com/Gitscooby/Images/blob/main/aws%20image%203.jpg">
+   -  Instance Store
 
-# AWS STORAGE SERVICES 
++  **Object Storage:**
 
-
-# Contents 
-
-**Instance Stores and Amazon Elastic Block Store (Amazon EBS)**
-
-+ Instance stores
-+ Amazon Elastic Block Storage (Amazon EBS)
-  
-**Amazon EBS Snapshots**
-
-**Amazon Simple Storage Service (Amazon S3)**
-
-+ Object Storage
-
-**Amazon Simple Storage Service (Amazon S3)** 
-
-**Amazon S3 Storage Classes** 
-+ S3 Standard	9 
-+ S3 Standard-Infrequent Access (S3 Standard-IA)	
-+ S3 One Zone-Infrequent Access (S3 One Zone-IA)	
-+ S3 Intelligent-Tiering	
-+ S3 Glacier	
-+ S3 Glacier Deep Archive	
+   -  Amazon Simple Storage Service(S3)
  
-**Amazon EBS vs Amazon S3** 
+   -  Amazon S3 Glacier
+     
++  **File Storage:**
 
-**Amazon EBS and Amazon S3**
-
-**Amazon EFS** 
-
-**Amazon Elastic File System (Amazon EFS)**
-
-+ File Storage	 
-+ Comparing Amazon EBS and Amazon EFS	
-
-**Amazon Relational Database Service (Amazon RDS)**
-
-+ Relational databases
-
-+ Amazon Relational Database Service
-
-**Amazon RDS database engines**
-
-+ Amazon Aurora
-
-+ Amazon DynamoDB
-
-+ Nonrelational Databases
-
-+ Amazon DynamoDB
-
-**Serverless**
-
-**Automatic Scaling** 
-
-**AMAZON RDS vs AMAZON DYNAMO DB**
-
-**Amazon Redshift**
-
-**AWS DMS (Data Migration Serves)**
-
-+ Homogeneous  migrations
-
-+ heterogeneous migration
-
-**Additional Database Services**
-
-+ Amazon DocumentDB
+   - Elastic File System
  
-+ Amazon Neptune
-
-+ Amazon Quantum Ledger Database (Amazon QLDB)
-
-+ Amazon Managed Blockchain
-
-+ Amazon ElastiCache
-
-+ Amazon DynamoDB Accelerator	
-
+   - Amazon FSx for Lustre
  
+   - Amazon FSx for Windows File Server
+     
++  **Hybrid Cloud Storage:**
 
-# Instance Stores and Amazon Elastic Block Store (Amazon EBS) 
-  
-## Instance stores 
-
-Block-level storage volumes behave like physical hard drives. 
-
-An instance store provides temporary block-level storage for an Amazon EC2 instance. An instance store is disk storage that is physically attached to the host computer for an EC2 instance, and therefore has the same lifespan as the instance. When the instance is terminated, you lose any data in the instance store. 
+   -  Amazon Storage Gateway
 
 
-An Amazon EC2 instance with an attached instance store is running. 
+
+![TYPES OF STORAGE SERVICES](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/58c0a0b6-1823-4c5f-992b-83e130771cf5)
 
 
-<img src="https://github.com/Gitscooby/Images/blob/main/image%201.png">
-  
+---
+
+
+## **Difference between Block vs Object vs File Storage:**
+
+
+
+<p align="center">
+  <img src="https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/4b9e3a7b-e23b-4ad9-8177-634b236200f4" alt="DIFFERENCE_STORAGE">
+</p>
+
+
+
+
+| Feature          | Block Storage                       | File Storage                      | Object Storage                           |
+|:-----------------|:-----------------------------------:|:----------------------------------:|:-----------------------------------------:|
+| **Structure**        | Fixed-sized blocks                   | Files and directories             | Objects with unique identifiers         |
+| **Use Case**         | High-performance, random access      | Shared environments, hierarchical | Unstructured data, scalable, cloud-based |
+| **Access Method**    | Block-level access                  | File-level access                 | Object-level access (via URL)            |
+| **Flexibility**      | Supports individual block operations| Supports sequential and random access| Efficient storage and retrieval of large data |
+| **Scalability**      | Scalable by adding more blocks       | Scalable, but managing directories may become complex | Highly scalable, efficient for large volumes of data |
+| **Example Service**  | Amazon Elastic Block Store (EBS)    | Amazon Elastic File System (EFS)  | Amazon Simple Storage Service (S3)      |
+
+
+
+---
+
+
+
+
+
+## **1. Block Storage:**
+
++  Block storage is a type of data storage that is used to store data in fixed-sized blocks or chunks.
+
++  Each block is treated as an individual hard drive, and they can be individually formatted with file systems.
++  Unlike file storage, which organizes data hierarchically using directories and folders,
+   block storage does not organize data into a hierarchical structure and is typically used for raw storage purposes.
+
+
+
+
+
+### **Types of Block Storages in AWS:**
+   
+
+Amazon Web Services provide two types of Block Storages, they are
+   
+
+-  **Instance Store(temporary)**
+     
+-  **Elastic Block Storage(permanent)**
+
+
+---
+
+
+### **Instance Store:**
+
+
+
+![INSTANCE STORE](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/0f5cde3c-663f-487b-97da-b1eaf4038745)
+
+
+
++  An instance store provides **temporary block-level storage** for your instance.
+
++  This storage is located on disks that are **physically** attached to the host computer.
++  Volatile, temporary storage that is attached to your instances & It is only **present during the running lifetime of the instance.**
++  The size of an instance store and the number of available devices varies by **instance type.**
++  Instance store is dedicated to a particular instance, the disk subsystem is shared among instances on a host computer.
++  Instance store volumes do not their own management application programming interface (API).
++  You cannot make an instance store volume available after you launch the instance.
+
+
+
+
+### **Use-Case:**
+
+   -  AWS instance store volumes work well for temporary storage of information that is continually changing, such as buffers, caches, scratch data, and other temporary content.
+     
+   -  You can also use them for data that is replicated across a fleet of instances, such as a load balanced pool of web servers.
+
+
+
+
+
+### **How the Instance Store Works:**
+
+
++  An Amazon EC2 instance running with an attached instance store.
+
+
+![image 1](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/57626ffb-0052-41b8-93e2-4db4a0bdf62a)
+
+
++  The instance has been stopped or terminated.
+
+
+![image 2](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/0c23d4fa-1272-4c46-8f57-ff192d36b6c4)
+
+
++  All data on the attached instance store is deleted when the instance is stopped or terminated.
+
+
+![image 3](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/68274fcc-7bcb-458b-b30e-5ac23de4e208)
+
+
+
+---
+
+
+
+### **Elastic Block Storage(EBS):**
+
+
+![EBS2](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/bb9e7da9-8ebb-4969-a141-2c63727de557)
+
+
+
+
++  Amazon Elastic Block Storage provides **persistent block-storage volumes** for use with EC2 instances.
+
++  It is also known as **on-volatile storage** because it retains data even after power to that device is shut off.
++  Each EBS volume is **automatically replicated within its Availability Zone** to protect against component failure, offering **high availability and durability.**
++  With Amazon EBS, you can scale your usage up or down within minutes—all while paying only for the resources that you provision.
++  To achieve an even higher level of data durability, you can utilize Amazon EBS to **create point-in-time snapshots of your volumes,** a feature known as **EBS Snapshots.**
++  Additionally, you can recreate a new volume from a snapshot at any time, share snapshots, or even copy snapshots to different AWS Regions for enhanced **Disaster Recovery (DR) protection.**
++  An EBS snapshot functions as **an incremental backup.** In the initial backup of a volume all the data is copied, Subsequent backups only
+   save the blocks of data that have changed since the latest snapshot.
+
+
+
+![EBS_SNAP](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/300b5710-1b87-423a-884d-9755ef8df518)
+
+
+
+
+
+
+### **Use-Cases:**
+
+
++  EBS provides scalable and durable storage for database files, supporting relational and NoSQL databases on Amazon EC2 instances.
+   It enables dynamic adjustments in size and performance, along with reliable backup solutions using EBS snapshots.
+
+   
++  EBS is utilized for high-performance applications, including real-time analytics and simulations, offering low-latency and consistent I/O performance.
+   Users can select EBS volume types like Provisioned IOPS to meet specific throughput and IOPS requirements.
+
+
+
+
+
+### **How does Elastic Block Storage works:**
+
+
+
+![EBS_WORKS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/7d5df190-c7dd-4009-8ddd-e7da4e2dc75d)
+
+
+
+---
+
+
+### **The difference between Instance Store & Elastic Block Storage:**
+
+
+
+| **Feature**          | **Amazon EBS**                     | **Instance Store**                  |
+|:---------------------|:---------------------------------|:-----------------------------------|
+| **Persistence**      | Persistent storage                 | Non-persistent storage              |
+| **Use Cases**        | Suitable for databases, applications| Temporary data storage, caching     |
+| **Volume Types**     | Various types                      | Local instance storage is ephemeral |
+| **High Availability** | Volumes can be attached/detached    | Local to the instance               |
+| **Snapshot Support** | Supports point-in-time snapshots   | No snapshot support                 |
+| **Scalability**      | Can be dynamically resized         | Size is fixed based on instance type|
+| **Cost Implications**| Incurs additional costs for storage | No additional storage costs         |
+| **Data Durability**  | Data is durably stored              | Data is lost if instance fails      |
+
+
+
+---
+
+
+## **2. Object Storage:**
+
+
+![STORAGE_OBJECT](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/a02d61e6-af2a-45e7-9f22-87f0a4ee9b22)
+
+
+
++  Object storage redefines data storage, treating information as self-contained objects with unique identifiers, metadata, and data.
+
++  Unlike traditional systems, it dispenses with hierarchical structures, enabling seamless scaling for unstructured data.
++  Emphasizing high durability and reliability through replication, it ensures data availability despite hardware failures.
++  Its cost-effective scalability, API accessibility, and metadata-driven organization make it crucial for modern data management.
+
+
+## **Types of Object Storage in Amazon Web Services:**
+
+The Object Storage Services provided by Amazon Web Services are
+
++  **Amazon Simple Storage Services(S3)**
+
++  **Amazon Simple Storage Service Glacier**
+
+
+---
+
+### **Amazon Simple Storage Service(S3):**
+
+
+
+![STORAGE_S3](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/3425d47f-11a6-4736-88a6-516e8326ac36)
+
+
+
++  Amazon S3 is a managed cloud storage solution that allows you to store data as objects in a bucket.
+
++  Objects can be nearly any data file, such as documents, images, or videos.
++  Buckets serve as logical containers for objects.
++  When adding objects to a bucket, a unique name, known as an object key, must be assigned.
++  Amazon S3 is designed for seamless scalability and offers over 11 nines (99.999999999 percent) of durability.
++  Unlike EC2 instances, Amazon S3 is a global service, not region-specific.
++  The data stored in Amazon S3 isn't tied to any specific server, eliminating the need for self-managing infrastructure.
++  Additionally, Amazon S3 acts as a Version Control management system and supports static website hosting.
++  Its characteristics include the ability to virtually store an unlimited number of objects, redundant storage of data.
++  Amazon S3 also provides low-latency access to data over the internet via HTTP or HTTPS, allowing data retrieval from anywhere at any time.
++  Amazon S3 provides different types of storage classes based on features, availability, and pricing, allowing users to select the most
+   suitable option for their work. The available storage classes are:
+
+   - **Amazon S3 Standard**
  
- 
-**The instance is stopped or terminated.**
-
-<img src="https://github.com/Gitscooby/Images/blob/main/image%202.png">
-
-
-**All data on the attached instance store is deleted.** 
-
-
-<img src="https://github.com/Gitscooby/Images/blob/main/image%203.png">
-  
-**Amazon Elastic Block Storage (Amazon EBS)**
-
-**Amazon Elastic Block Store (Amazon EBS)** is a service that provides block-level storage volumes that you can use with Amazon EC2 instances. If you stop or terminate an Amazon EC2 instance, all the data on the attached EBS volume remains available. 
-
-
-To create an EBS volume, you define the configuration (such as volume size and type) and provision it. After you create an EBS volume, it can attach to an Amazon EC2 instance. 
-
-
-Because EBS volumes are for data that needs to persist, it’s important to back up the data. You can take incremental backups of EBS volumes by creating Amazon EBS snapshots. 
-
-
-<img src="https://github.com/Gitscooby/Images/blob/main/image%205.jpg">
-
-  
-# Amazon EBS Snapshots
-
-An EBS snapshot is an incremental backup. This means that the first backup taken of a volume copies all the data. For subsequent backups, only the blocks of data that have changed since the most recent snapshot are saved.  
-
-Incremental backups are different from full backups, in which all the data in a storage volume copies each time a backup occurs. The full backup includes data that has not changed since the most recent backup. 
-  
-
-<img src="https://github.com/Gitscooby/Images/blob/main/image%204.png">
-
- 
-# Amazon Simple Storage Service (Amazon S3)
-  
-**Object Storage**
-
-In object storage, each object consists of data, metadata, and a key. 
-
-The data might be an image, video, text document, or any other type of file. Metadata contains information about what the data is, how it is used, the object size, and so on. An object’s key is its unique identifier. 
-
-
-<img src="https://github.com/Gitscooby/Images/blob/main/images%206.png">
-
-
-  
-Recall that when you modify a file in block storage, only the pieces that are changed are updated. When a file in object storage is modified, the entire object is updated.
-
-
-
-# Amazon Simple Storage Service (Amazon S3) 
-
-**Amazon Simple Storage Service (Amazon S3)** is a service that provides object-level storage. Amazon S3 stores data as objects in buckets. 
-
-
-You can upload any type of file to Amazon S3, such as images, videos, text files, and so on. For example, you might use Amazon S3 to store backup files, media files for a website, or archived documents. Amazon S3 offers unlimited storage space. The maximum file size for an object in Amazon S3 is 5 TB. 
-
-
-When you upload a file to Amazon S3, you can set permissions to control visibility and access to it. You can also use the Amazon S3 versioning feature to track changes to your objects over time. 
- 
-
- 
-## Amazon S3 Storage Classes 
-
-With Amazon S3, you pay only for what you use. You can choose from a range of storage classes to select a fit for your business and cost needs. When selecting an Amazon S3 storage class, consider these two factors: 
-
-•	How often you plan to retrieve your data 
-
-•	How available you need your data to be 
-
-## S3 Standard 
-
-•	Designed for frequently accessed data 
-
-•	Stores data in a minimum of three Availability Zones
-
-S3 Standard provides high availability for objects. This makes it a good choice for a wide range of use cases, such as websites, content distribution, and data analytics. S3 Standard has a higher cost than other storage classes intended for infrequently accessed data and archival storage. 
-
-
-## S3 Standard-Infrequent Access (S3 Standard-IA) 
-
-•	Ideal for infrequently accessed data 
-
-•	Similar to S3 Standard but has a lower storage price and higher retrieval price 
-
-S3 Standard-IA is ideal for data infrequently accessed but requires high availability when needed. Both S3 Standard and S3 Standard-IA store data in a minimum of three Availability Zones. S3 Standard-IA provides the same level of availability as S3 Standard but with a lower storage price and a higher retrieval price.
-
-
-
-## S3 One Zone-Infrequent Access (S3 One Zone-IA) 
-
-•	Stores data in a single Availability Zone 
-
-•	Has a lower storage price than S3 Standard-IA 
-
-Compared to S3 Standard and S3 Standard-IA, which store data in a minimum of three Availability Zones, S3 One Zone-IA stores data in a single Availability Zone. This makes it a good storage class to consider if the following conditions apply: 
-
-•	You want to save costs on storage. 
-
-•	You can easily reproduce your data in the event of an Availability Zone failure. 
-
-
- 
-## S3 Intelligent-Tiering
-
-•	Ideal for data with unknown or changing access patterns 
-
-•	Requires a small monthly monitoring and automation fee per object
-
-In the S3 Intelligent-Tiering storage class, Amazon S3 monitors objects’ access patterns. If you haven’t accessed an object for 30 consecutive days, Amazon S3 automatically moves it to the infrequent access tier, S3 Standard-IA. If you access an object in the infrequent access tier, Amazon S3 automatically moves it to the frequent access tier, S3 Standard. 
-
-
-## S3 Glacier
-
-•	Low-cost storage designed for data archiving 
-
-•	Able to retrieve objects within a few minutes to hours 
-
-S3 Glacier is a low-cost storage class that is ideal for data archiving. For example, you might use this storage class to store archived customer records or older photos and video files. 
-
-
-## S3 Glacier Deep Archive 
-
-•	Lowest-cost object storage class ideal for archiving 
-
-•	Able to retrieve objects within 12 hours 
-
-When deciding between Amazon S3 Glacier and Amazon S3 Glacier Deep Archive, consider how quickly you need to retrieve archived objects. You can retrieve objects stored in the S3 Glacier storage class within a few minutes to a few hours. By comparison, you can retrieve objects stored in the S3 Glacier Deep Archive storage class within 12 hours. 
- 
- 
- 
-# Amazon EBS vs Amazon s3
-
-
-<img src= "https://github.com/zen-class/zen-class-devops-documentation/assets/113815517/185e8ba5-3d9e-4c8e-ad40-d5aec509c620">
-
-
-<img src= "https://github.com/zen-class/zen-class-devops-documentation/assets/113815517/1634bb6d-9117-4cdb-8e48-572cadb92ffb">
- 
-  
-## Amazon EBS and Amazon S3 
-
-When you store data in EBS, it's break file into components or blocks 
-
-When you store data in S3, it stores data as a complete discreate object 
-  
-**Round 1:**
-
-Let's say you're running a photo analysis website where users upload a photo of  themselves and your application finds the animals that look just like them.  
-
-You have potentially millions of animal pictures that all need to be indexed and possibly  viewed by thousands of people at once.
-
-This is the perfect use case for S3.  
-  
-S3 is already web-enabled.
-
-Every object already has a URL that you can control access rights to who can see or manage the image. 
-
-It's regionally distributed, which means that it has 11 9's of durability.  
-
-No need to worry about backup strategies. S3 is your backup strategy.  Plus the cost savings is substantial overrunning the same storage load on EBS,  with the additional advantage of being server less. No Amazon EC2 instances are needed.  
-
-
-  
-**Round 2:**
-
-you have an 80-gigabyte video file that you're making edit corrections on.
-
-To know the best storage class here, we need to understand the difference between  object storage and block storage. Object storage treats any file  as a complete discrete object.  
-  
-Now, this is great for documents, and images,  and video files that get  uploaded and consumed as entire objects.  
-  
-But every time there's a change to the object,  you must re-upload the entire file.  
-There are no Delta updates.  
-  
-Block storage breaks those files down to small component parts or blocks.  This means for that 80-gigabyte file, when you make an edit to one scene in  the film and save that change, the engine only updates the blocks where those bits live.  If you're making a bunch of micro edits using EBS, Elastic Block Storage is the perfect use case.  
-If you were using S3, every time you save the changes, the system would have to upload all 80 gigabytes, that whole thing every time.  
-  
- 
- 
-# Amazon EFS 
-  
-  
-<img src= "https://github.com/zen-class/zen-class-devops-documentation/assets/113815517/1b498c2a-2567-482c-b0a6-1799de7ca1c1">
-
-<img src= "https://github.com/zen-class/zen-class-devops-documentation/assets/113815517/9fb9f95c-f589-43cc-858b-c63b4fe65833">
-
-<img src= "https://github.com/zen-class/zen-class-devops-documentation/assets/113815517/a544f8a1-571b-46f9-aa5e-c738ed60a6db">
-
-
+   - **Amazon S3 Intelligent-Tiering**
+   - **Amazon S3 Standard-Infrequent Access (Amazon S3 Standard-IA)**
+   - **Amazon S3 One Zone-Infrequent Access (Amazon S3 One Zone-IA)**
+   - **Amazon S3 Glacier**
+   - **Amazon S3 Glacier Deep Archive**
+
++  These classes offer a range of capabilities, enabling users to optimize costs while meeting specific accessibility and durability requirements for their data.
     
-# Amazon Elastic File System (Amazon EFS) 
-  
-## File Storage 
 
-In file storage, multiple clients (such as users, applications, servers, and so on) can access data that is stored in shared file folders. In this approach, a storage server uses block storage with a local file system to organize files. Clients access data through file paths. 
+![AMAZON_S3_STORAGE_CLASSES](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/4638caa8-c5ed-435a-a7f0-b9cd44572e40)
 
 
-Compared to block storage and object storage, file storage is ideal for use cases in which a large number of services and resources need to access the same data at the same time. 
 
-**Amazon Elastic File System (Amazon EFS)** is a scalable file system used with AWS Cloud services and onpremises resources. As you add and remove files, Amazon EFS grows and shrinks automatically. It can scale on demand to petabytes without disrupting applications.  
+###  **Use-Case:**
 
 
-# Comparing Amazon EBS and Amazon EFS 
-  
-## Amazon EBS
+Some of the use cases of amazon S3 include:
 
-•	An Amazon EBS volume stores data in a single Availability Zone. 
 
-•	To attach an Amazon EC2 instance to an EBS volume, both the Amazon EC2 instance and the EBS volume must reside within the same Availability Zone.
++  **Static Website Hosting:**
 
-## Amazon EFS 
+   - Amazon S3 helps in hosting static websites. Hence users can use their domain. Serverless Web Applications can be developed using S3 and by using generated URLs, users can access the application.
 
-•	Amazon EFS is a regional service. It stores data in and across multiple Availability Zones.
 
-•	The duplicate storage enables you to access data concurrently from all the Availability Zones in the Region where a file system is located. Additionally, on-premises servers can access Amazon EFS using AWS Direct Connect. 
-  
- 
- 
-# Amazon Relational Database Service (Amazon RDS) 
-  
-## Relational databases 
++  **Backup & Recovery:**
 
-In a relational database, data is stored in a way that relates it to other pieces of data.  
+   - Amazon S3 helps create backups and archive critical data by supporting Cross Region Replication. Due to versioning, which stores multiple versions of each file, it is easy to recover the files.
 
 
-An example of a relational database might be the coffee shop’s inventory management system. Each record in the database would include data for a single item, such as product name, size, price, and so on. 
++  **Low-cost data archiving:**
 
+   -  It is possible to move data archives to certain levels of AWS S3 services like Glacier storage classes, which is one of the cheap and durable archiving solutions for compliance purposes; thus, data can be retained for a longer time
 
-Relational databases use structured query language (SQL) to store and query data. This approach allows data to be stored in an easily understandable, consistent, and scalable way. For example, the coffee shop owners can write a SQL query to identify all the customers whose most frequently purchased drink is a medium latte
 
-  
- 
-# Amazon Relational Database Service 
 
-**Amazon Relational Database Service (Amazon RDS)** is a service that enables you to run relational databases in the AWS Cloud.
+## To know more about [Amazon S3 just click here](https://github.com/zen-class/zen-class-devops-documentation/blob/main/010%20-%20AWS/005%20S3.md)
 
 
-Amazon RDS is a managed service that automates tasks such as hardware provisioning, database setup, patching, and backups. With these capabilities, you can spend less time completing administrative tasks and more time using data to innovate your applications. You can integrate Amazon RDS with other services to fulfill your business and operational needs, such as using AWS Lambda to query your database from a serverless application. 
 
+---
 
-Amazon RDS provides a number of different security options. Many Amazon RDS database engines offer encryption at rest (protecting data while it is stored) and encryption in transit (protecting data while it is being sent and received). 
 
 
- 
-# Amazon RDS database engines 
+## **Comparison between Amazon Elastic Block Storage vs Amazon Simple Storage Service:**
 
-Amazon RDS is available on six database engines, which optimize for memory, performance, or input/output (I/O). Supported database engines include: 
 
-•	Amazon Aurora 
+**Scenario:**
+Consider a video editing project where an 80-gigabyte video file undergoes corrections. For efficient and granular editing, Amazon EBS is well-suited as it allows updates to specific 
+blocks affected by the edits, optimizing data transfer. In contrast, if the scenario involves a photo analysis website where users upload images to be indexed and viewed by a large audience, Amazon S3 proves ideal. S3's web-enabled nature, distributed architecture, and cost-effectiveness make it a seamless choice for scalable and accessible storage.
 
-•	PostgreSQL 
 
-•	MySQL 
 
-•	MariaDB 
+| **Aspect**                               | **Amazon EBS**                                      | **Amazon S3**                                              |
+|------------------------------------------|-----------------------------------------------------|------------------------------------------------------------|
+| **Storage Type**                         | Block storage that presents as volumes to EC2 instances | Object storage with a flat structure, treats files as objects|
+| **Use Case Scenario**                    | Video Editing: Requires efficient block-level updates | Photo Analysis Website: Web-enabled, distributed, and accessible|
+| **Editing Efficiency**                   | Updates only specific blocks affected by edits      | Requires re-uploading the entire object for each change     |
+| **Access Method**                        | Block-level access                                   | Object-level access via URL, suitable for web-enabled scenarios|
+| **Durability**                           | High durability, replicated within Availability Zone | 11 9's of durability, distributed across multiple Availability Zones|
+| **Backup Strategy**                      | Suitable as a primary storage solution and for backups | Inherently serves as a backup strategy with versioning and durability|
+| **Cost Structure**                       | Incurs costs based on provisioned storage and IOPS   | Cost-effective for storing large volumes with pay-as-you-go pricing|
+| **Scalability**                          | Scalable by adding more EBS volumes to instances    | Highly scalable, accommodating vast amounts of data globally|
+| **Accessibility**                        | Directly attached to EC2 instances                  | Web-enabled, accessible via unique URLs with fine-grained access control|
+| **Example Service**                      | Amazon Elastic Block Store (EBS)                    | Amazon Simple Storage Service (S3)                            |
 
-•	Oracle Database 
 
-•	Microsoft SQL Server 
 
-# Amazon Aurora 
 
-Amazon Aurora is an enterprise-class relational database. It is compatible with MySQL and PostgreSQL relational databases. It is up to five times faster than standard MySQL databases and up to three times faster than standard PostgreSQL databases. 
+---
 
 
-Amazon Aurora helps to reduce your database costs by reducing unnecessary input/output (I/O) operations, while ensuring that your database resources remain reliable and available.  
 
+## **3. File Storage:**
 
-Consider Amazon Aurora if your workloads require high availability. It replicates six copies of your data across three Availability Zones and continuously backs up your data to Amazon S3. 
 
 
- 
-# Amazon DynamoDB 
-  
-Nonrelational Databases 
-In a nonrelational database, you create tables. A table is a place where you can store and query data. 
+![EFS_ALTER](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/1266c4a4-a4cd-4470-a9a1-3ee5410af38d)
 
-Nonrelational databases are sometimes referred to as “NoSQL databases” because they use structures other than rows and columns to organize data. One type of structural approach for nonrelational databases is keyvalue pairs. With key-value pairs, data is organized into items (keys), and items have attributes (values). You can think of attributes as being different features of your data. 
 
-In a key-value database, you can add or remove attributes from items in the table at any time. Additionally, not every item in the table has to have the same attributes.  
 
++  File storage is a type of data storage method that organizes and stores data in a hierarchical structure, using directories and files. 
 
-## Amazon DynamoDB 
 
-**Amazon DynamoDB** is a key-value database service. It delivers single-digit millisecond performance at any scale.
++  In file storage systems, data is grouped into files, and these files are organized within directories or folders.
++  Each file is assigned a unique name within its directory, allowing for easy navigation and retrieval. 
 
 
-## Serverless 
 
-•	DynamoDB is serverless, which means that you do not have to provision, patch, or manage servers.  
+## **Types of File Storage in Amazon Web Services:**
 
-•	You also do not have to install, maintain, or operate software. 
 
-## Automatic Scaling 
+The most important File Storage Service provided by Amazon Web Services are
 
-•	As the size of your database shrinks or grows, DynamoDB automatically scales to adjust for changes in capacity while maintaining consistent performance.  
++  **Amazon Elastic File System (Amazon EFS)**
 
-•	This makes it a suitable choice for use cases that require high performance while scaling.  
-  
- 
-# AMAZON RDS vs AMAZON DYNAMO DB
 
+---
 
-<img src= "https://github.com/zen-class/zen-class-devops-documentation/assets/113815517/e5a141f7-dbef-426b-a384-e4e9a31f490c">
 
+### **Amazon Elastic File System: (Amazon EFS)**
 
-## Amazon Redshift 
-  
-Amazon Redshift is a data warehousing service that you can use for big data analytics. It offers the ability to collect data from many sources and helps you to understand relationships and trends across your data. 
 
-# AWS DMS (Data Migration Serves) 
 
-## Homogeneous  migrations
+![EFS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/39ce268f-a46b-4a96-89c1-e42abbec7a0e)
 
-can be from MySQL to Amazon RDS for MySQL, Microsoft SQL Server to Amazon RDS for SQL Server, or even Oracle to Amazon RDS for Oracle. The process is fairly straight forward.  
 
-Since schema structures, data types, and database code is compatible between source and target.  
-  
-## heterogeneous migration 
+- **Scalable Storage:** Amazon Elastic File System (Amazon EFS) offers scalable, Petabyte-scale, low-latency, fully managed, and elastic Network File System (NFS) storage designed for use with AWS Cloud services and on-premises resources.
 
-The second type of migration occurs when source and target databases are of different types.  
+- **Network File System (NFS):** Enables storing and retrieving data in a network.
 
-This is called heterogeneous migration and it's a 2-step process.  
+- **User-Friendly Interface:** EFS provides an easy-to-use interface for quick and simple file system creation and configuration.
 
-Since the schema structures, data types, and database code are different between source and target,  we first need to convert them using the AWS schema conversion tool.  
+- **Compatibility:** Compatible with all Linux-based Amazon Machine Images (AMIs) for Amazon Elastic Compute Cloud (Amazon EC2).
 
-This will convert the source schema and code to match that of the target database.  The next step is then to use DMS to migrate data from the source database  to the target database. 
- 
- 
- 
-  
-# Additional Database Services 
-  
-## Amazon DocumentDB
+- **Elastic Scaling:** Built to elastically scale on demand without disrupting applications.
 
-**Amazon DocumentDB** is a document database service that supports MongoDB workloads. (MongoDB is a document database program.) 
+- **Automatic Growth and Shrinkage:** EFS file systems automatically grow and shrink based on file additions or removals, ensuring applications have the required storage.
 
-## Amazon Neptune 
+- **Concurrent Access:** Access your Amazon EFS file system concurrently from Amazon EC2 instances in your Amazon Virtual Private Cloud (Amazon VPC), facilitating access for applications that scale beyond a single connection.
 
-**Amazon Neptune**  is a graph database service.  
+- **Versatile Use Cases:** An easy solution for building file systems supporting big data and analytics, media processing workflows, content management, web serving, and home directories.
 
-You can use Amazon Neptune to build and run applications that work with highly connected datasets, such as recommendation engines, fraud detection, and knowledge graphs. 
+- **Performance Attributes:** To support various cloud storage workloads, Amazon EFS exposes attributes allowing you to control file system performance. These attributes include performance mode, storage class, and throughput mode.
 
-## Amazon Quantum Ledger Database (Amazon QLDB)  
 
-**Amazon Quantum Ledger Database (Amazon QLDB)** is a ledger database service.  
 
-You can use Amazon QLDB to review a complete history of all the changes that have been made to your application data. 
+### **Architecture Diagram:**
 
-## Amazon Managed Blockchain 
 
-**Amazon Managed Blockchain**  is a service that you can use to create and manage blockchain networks with open-source frameworks.  
+![EFS_OVERVIEW](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/e5f5e738-a925-4cb6-820b-27b7402bf607)
 
-Blockchain is a distributed ledger system that lets multiple parties run transactions and share data without a central authority.
 
-## Amazon ElastiCache 
 
-**Amazon ElastiCache** is a service that adds caching layers on top of your databases to help improve the read times of common requests. 
+### **Use-Case:**
 
-It supports two types of data stores: Redis and Memcached. 
- 
-## Amazon DynamoDB Accelerator 
 
-**Amazon DynamoDB Accelerator (DAX)**  is an in-memory cache for DynamoDB.  
++  **Application testing and development** – Amazon EFS provides your development environments with a common storage repository. With an Amazon EFS file system,
+   you can share code and other files in a secure and organized way. Amazon EFS delivers a scalable and highly available solution
+   that works well for testing and development workloads.
 
-It helps improve response times from single-digit milliseconds to microseconds. 
-  
- 
++  **Big Data analytics** – Amazon EFS provides scale and performance for big data applications that require high throughput to compute nodes.
+   It also provides read-after-write consistency and low-latency file operations.
+
++  **Home directories** – Amazon EFS can provide storage for organizations that have many users who must access and share common datasets.
+
+
+
+### **How does Amazon Elastic File System works:**
+
+
+![EFS WORKS](https://github.com/zen-class/zen-class-devops-documentation/assets/129171351/a683c66f-8a96-4df0-ba48-72c1985b44f6)
+
+
+---
+
